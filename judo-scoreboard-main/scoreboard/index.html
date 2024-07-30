@@ -104,7 +104,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
                                             class="btn btn-secondary optional"
                                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Remove Shido (Shift+4)"
                                         >-</button>
-                                        <span class="lh-1" onclick="add_point(0,'shido')" id="point_0_shido">NaN</span>
+                                        <span class="lh-1"  id="point_0_shido">NaN</span>
                                         <button
                                             onclick="add_point(0,'shido')"
                                             type="button"
@@ -133,14 +133,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
                                             onclick="remove_point(1,'ippon')"
                                             type="button"
                                             class="btn btn-light optional"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Remove Ippon (Shift+4)"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Remove Ippon (Shift+5)"
                                         >-</button>
                                         <span class="lh-1" onclick="add_point(1,'ippon')" id="point_1_ippon">NaN</span>
                                         <button
                                             onclick="add_point(1,'ippon')"
                                             type="button"
                                             class="btn btn-light optional"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Ippon (4)"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Ippon (5)"
                                         >+</button>
                                     </div>
                                 </td>
@@ -153,14 +153,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
                                             onclick="remove_point(1,'wazari')"
                                             type="button"
                                             class="btn btn-light optional"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Remove Wazari (Shift+5)"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Remove Wazari (Shift+6)"
                                         >-</button>
                                         <span class="lh-1" onclick="add_point(1,'wazari')" id="point_1_wazari">NaN</span>
                                         <button
                                             onclick="add_point(1,'wazari')"
                                             type="button"
                                             class="btn btn-light optional"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Wazari (5)"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Wazari (6)"
                                         >+</button>
                                     </div>
                                 </td>
@@ -173,14 +173,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
                                             onclick="remove_point(1,'yuko')"
                                             type="button"
                                             class="btn btn-light optional"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Remove Yuko (Shift+6)"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Remove Yuko (Shift+7)"
                                         >-</button>
                                         <span class="lh-1" onclick="add_point(1,'yuko')" id="point_1_yuko">NaN</span>
                                         <button
                                             onclick="add_point(1,'yuko')"
                                             type="button"
                                             class="btn btn-light optional"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Yuko (5)"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Yuko (7)"
                                         >+</button>
                                     </div>
                                 </td>
@@ -193,15 +193,16 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
                                             onclick="remove_point(1,'shido')"
                                             type="button"
                                             class="btn btn-light optional"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Remove Shido (Shift+6)"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Remove Shido (Shift+8)"                    
                                         >-</button>
-                                        <span class="lh-1" onclick="add_point(1,'shido')" id="point_1_shido">NaN</span>
+                                        <span class="lh-1" style="line-height: normal;" id="point_1_shido">NaN</span>
                                         <button
                                             onclick="add_point(1,'shido')"
                                             type="button"
                                             class="btn btn-light optional"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Shido (6)"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Shido (8)"
                                         >+</button>
+                                        
                                     </div>
                                 </td>
                             </tr>
@@ -373,141 +374,19 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 		<i class="fas fa-arrow-down"></i>
     </a>
 
-    <br>
+    <br>    
 
-    <div class="container">
-
-        <h2>Custom changes to rules</h2>
-
-        In the following, you can adapt the scoreboard logic directly by
-        modifying the below JSON configuration. Times are in milliseconds. Many
-        settings (e.g., "osaekomi_wazari_time", "osaekomi_ippon_time",
-        "osaekomi_warn_unassigned", "count_wazaris_towards_ippon") can be set to
-        "null" (without the quotation marks) to disable them.
-
-        Adapt the JSON and click "Update and Reset" to apply the changes.
-
-        <div class="form-group">
-            <textarea class="form-control" id="fight_rules" name="fight_rules" rows="10" cols="50">Not loaded...</textarea>
-            <button class="btn btn-primary mt-2" onclick="set_fight_rules(); reset_all(); window.scrollTo({ top: 0, behavior: 'smooth' });">Update and Reset</button>
+    <div class="container md md-12">        
+        <div class="form-group md md-6">
+            <a type="button" class="btn btn-primary md md-6" id="manual" href="./manual.html">
+                <i class="fight">Manual do Usuário</i>
+            </a>
+            <button class="btn btn-primary md md-6" onclick="set_fight_rules(); reset_all(); window.scrollTo({ top: 0, behavior: 'smooth' });">Update and Reset</button>                        
         </div>
-
-        <h2 id="usage">Usage</h2>
-
-        To use this scoreboard in a tournament, proceed as follows:
-
-        <ul>
-            <li>Prepare a laptop and connect it to a second monitor (or projector).</li>
-            <li>Download the webpage source scoreboard.zip from <a
-            href="https://github.com/bichselb/judo-scoreboard/releases/latest">the
-            latest GitHub release</a>.</li>
-            <li>Extract the zip to any directory.</li>
-            <li>Open the extracted file index.html.</li>
-            <li>Open a new view-only tab by clicking the eye icon.</li>
-            <li>Move the opened tab to the second monitor.</li>
-            <li>Click into the moved tab and press F11 to make the page full
-            screen.</li>
-            <li>Move the mouse back to the original tab and use the scoreboard
-            from there. Most buttons can also be triggered by keyboard
-            shortcuts, which are noted as hover information on the respective
-            buttons. We recommend labeling the keyboard using stickers, such as
-            in <a href="./images/stickers.jpeg">this example</a>.</li>
-        </ul>
-
-        Here is an overview over all keyboard shortcuts:
-
-        <table class="table">
-            <thead class="thead-light">
-                <tr>
-                    <th>Action</th>
-                    <th>Keyboard shortcut</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Hajime</td>
-                    <td>Space (also resets Osaekomi)</td>
-                </tr>
-                <tr>
-                    <td>Mate</td>
-                    <td>Space</td>
-                </tr>
-                <tr>
-                    <td>Osaekomi</td>
-                    <td>W, assign with A or D</td>
-                </tr>
-                <tr>
-                    <td>Toketa</td>
-                    <td>W, optionally reset time with S</td>
-                </tr>
-                <tr>
-                    <td>Ippon</td>
-                    <td>1 (white) or 4 (blue)</td>
-                </tr>
-                <tr>
-                    <td>Wazari</td>
-                    <td>2 (white) or 5 (blue)</td>
-                </tr>
-                <tr>
-                    <td>Yuko</td>
-                    <td>3 (white) or 6 (blue)</td>
-                </tr>
-                <tr>
-                    <td>Shido</td>
-                    <td>4 (white) or 7 (blue)</td>
-                </tr>
-                <tr>
-                    <td>Next fight (reset scoreboard)</td>
-                    <td>Enter</td>
-                </tr>
-                <tr>
-                    <td>Switch to golden score</td>
-                    <td>Use mouse</td>
-                </tr>
-                <tr>
-                    <td>Set fight time</td>
-                    <td>Use mouse</td>
-                </tr>
-                <tr>
-                    <td>Continue (both the fight and Osaekomi). Useful after accidentally stopping the time.</td>
-                    <td>C</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <p>
-            To adapt the font size (for smaller/larger screens), simply zoom in or out (Firefox: Ctrl+MouseWheel). If you want to zoom the view-only page separately, reconfigure Firefox as follows:
-
-            <ul>
-                <li>Type "about:config" in your address bar and press enter.</li>
-                <li>If Firefox asks you, say you'll be careful.</li>
-                <li>Search the string "browser.zoom.siteSpecific". If it does not exist, create one, it's a boolean string.</li>
-                <li>Set it to false (Right click > "Toggle" or click on "Toggle").</li>
-            </ul>
-        </p>
-
-        <h2>About</h2>
-
-        <p>This software was created by Benjamin Bichsel from <a href="https://www.swiss-judo.ch/">Judo und Ju-Jitsu Club Frauenfeld</a>.</p>
-
-        <p>This is a free and open-source project licensed under the <a
-        href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General Public License</a>. As an open-source project, this software
-        is available for anyone to use, modify, and distribute in accordance
-        with the terms of the license (simplified summary <a
-        href="https://www.tldrlegal.com/license/gnu-affero-general-public-license-v3-agpl-3-0">here</a>).</p>
-
-        <p>This software was built using various resources,
-        including but not limited to:</p>
-        <ul class="list-group">
-          <li class="list-group-item">Icons from <a href="https://fontawesome.com/">FontAwesome</a></li>
-          <li class="list-group-item">Audio from <a href="https://freesound.org">Freesound</a> (Public Domain)</li>
-          <li class="list-group-item">Styles from <a href="https://getbootstrap.com/">Bootstrap</a> (MIT license)</li>
-          <li class="list-group-item">Japanese flag from <a href="https://en.wikipedia.org/wiki/Flag_of_Japan#/media/File:Flag_of_Japan.svg">Wikipedia</a> (Public domain)</li>
-          <li class="list-group-item">Inspiration from <a
-          href="http://www.scorejudo.com">ScoreJudo</a> (but this webpage does
-          not share any code with ScoreJudo)</li>
-        </ul>
-      </div>
+        <div class="form-group md md-6">
+            <textarea class="form-control" id="fight_rules" name="fight_rules" rows="10" cols="50">Not loaded...</textarea>
+        </div> 
+    </div>    
 
     <!-- RESOURCES -->
 
@@ -524,5 +403,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <script src="scripts/bootstrap.bundle.js"></script>
     <script src="scripts/style.js"></script>
     <script src="scripts/scoreboard.js"></script>
+
+    <license src="https://www.gnu.org/licenses/agpl-3.0.en.html"></license>
+    <license src="https://www.tldrlegal.com/license/gnu-affero-general-public-license-v3-agpl-3-0"></license>
+    
 </body>
 </html>
